@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
-    render json: @restaurants
+    @restaurants = Restaurant.first
+    render :json => @restaurants.images.map{|img| ({ image: url_for(img) })}
   end
 
   def create
