@@ -9,5 +9,6 @@ class OpinionsController < ApplicationController
   end
 
   def show
+    
   end
 end

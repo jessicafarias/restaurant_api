@@ -16,8 +16,9 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.first
-    render json: {restaurant: @restaurant, images:  @restaurant.images.map{|img| ({ image: url_for(img) })}}
+    @restaurant = Restaurant.find(params[:id])
+    @opinions = @restaurant.opinions
+    render json: {restaurant: @restaurant, opinions:@opinions, images:  @restaurant.images.map{|img| ({ image: url_for(img) })}}
   end
 
 
@@ -35,4 +36,5 @@ class RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(:name, :description, images: [])
   end
+
 end
