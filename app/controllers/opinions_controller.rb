@@ -1,14 +1,18 @@
 class OpinionsController < ApplicationController
-  def index
-  end
-
+  skip_before_action :verify_authenticity_token, only: [:create]
   def create
+    @opinion = Opinion.new(opinion_params)
+    if @opinion.save
+        render json: @opinion, status: :created, location: @opinion
+    else
+        render json: @opinion.errors, status: :unprocessable_entity
+    end
   end
 
-  def destroy
+  private
+
+  def opinion_params
+    params.require(:opinion).permit(:name, :body, :restaurant_id)
   end
 
-  def show
-    
-  end
 end
