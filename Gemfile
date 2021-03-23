@@ -25,6 +25,15 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
+
+# rails gem
+gem 'rubocop', '~>0.81.0'
+
+# Hirb provides a mini view framework for console applications and uses it to improve ripl(irb)'s default inspect output
+gem 'hirb', '~> 0.7.3'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
