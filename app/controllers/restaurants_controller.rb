@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @opinions = @restaurant.opinions
+    @opinions = @restaurant.opinions.order_desc
     render json: {restaurant: @restaurant, opinions:@opinions, images:  @restaurant.images.map{|img| ({ image: url_for(img) })}}
   end
 
