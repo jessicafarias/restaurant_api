@@ -30,6 +30,7 @@ This project was built using these technologies.
 * GitHub
 * Rubocop
 * Stylelint
+* PostgreSQL database
 
 
 ### Getting Started
