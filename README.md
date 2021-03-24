@@ -8,10 +8,10 @@
 [![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
-  <h3 align="center">Track</h3>
+  <h3 align="center">Restaurant API</h3>
 
   <p align="center">
-    This project is created with the porpuse of make comments on different restaurants<br /></p>
+    This project provides data of different restaurants and allows to user created comments on them <br /></p>
 
 <!-- ABOUT THE PROJECT -->
 
