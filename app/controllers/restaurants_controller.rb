@@ -18,7 +18,9 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @opinions = @restaurant.opinions.order_desc
-    render json: {restaurant: @restaurant, opinions:@opinions, images:  @restaurant.images.map{|img| ({ image: url_for(img) })}}
+    @all_images =[]
+    @all_images = @restaurant.images.map{|img| ({ image: url_for(img) })} if @restaurant.images.attached?
+    render json: {restaurant: @restaurant, opinions:@opinions, images:  @all_images}
   end
 
 
