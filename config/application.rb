@@ -15,5 +15,26 @@ module RestaurantApi
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'https://localhost:3000/'
+        resource(
+          '*',
+          headers: :any,
+          methods: [:get, :patch, :put, :delete, :post, :options],
+          credentials: true
+        )
+      end
+      allow do
+        origins 'https://focused-ramanujan-35f272.netlify.app/'
+    
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head],
+          credentials: true
+      end
+    end
+
+
   end
 end
