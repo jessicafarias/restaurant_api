@@ -9,7 +9,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       credentials: true
   end
   allow do
-    origins 'https://focused-ramanujan-35f272.netlify.app/'
+    origins 'https://focused-ramanujan-35f272.netlify.app'
 
     resource '*',
       headers: :any,

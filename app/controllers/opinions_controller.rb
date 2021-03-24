@@ -3,9 +3,9 @@ class OpinionsController < ApplicationController
   def create
     @opinion = Opinion.new(opinion_params)
     if @opinion.save
-        render json: @opinion, status: :created, location: @opinion
+      render json: @opinion, status: :created, location: @opinion
     else
-        render json: @opinion.errors, status: :unprocessable_entity
+      render json: @opinion.errors, status: :unprocessable_entity
     end
   end
 
@@ -14,5 +14,4 @@ class OpinionsController < ApplicationController
   def opinion_params
     params.require(:opinion).permit(:name, :body, :restaurant_id)
   end
-
 end
