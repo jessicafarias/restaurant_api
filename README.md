@@ -2,9 +2,6 @@
 
 ##### This is a back-end API, which provides data to [this application](https://github.com/jessicafarias/restaurant_app/tree/feature/milestone) that I developed.
 
-# Restaurant app
-Catalogue of restaurants
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -19,9 +16,9 @@ Catalogue of restaurants
 <!-- ABOUT THE PROJECT -->
 
 #### Features:
-- All users are allowed to make comments
-- The website is responsive
-- All images are located in the cloud
+- All users are allowed to make comments on each restaurant
+- The API render JSON Objects
+- All images are located in the cloud (cloudinary) using Active Storage
 
 #### Base URL for request
 It's deployed [here](https://restaurant-api3.herokuapp.com/) on heroku
@@ -106,12 +103,17 @@ const baseUrl = `https://restaurant-api3.herokuapp.com/
     body: JSON.stringify(data),
   });
 ```
-
+## future implementation
+- All users need to sign up and login.
+- The users can manage the a restaurant 
+- User can manage the photos unloaded
+- The opinions can be modify by the author.
+- Testing using rspec
+- Validation and restrictions that will interact with the Front-End application.
 
 ## Author
 
 ## 👤 Jessica Michelle Farías Rosado:
-Working as a FullStack developer on this project.
 
  [![Website](https://img.shields.io/badge/-Website-black?style=for-the-badge&logo=Julia&logoColor=white)](https://jessicafarias.github.io/)
 

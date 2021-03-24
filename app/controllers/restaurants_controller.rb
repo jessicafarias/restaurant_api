@@ -1,8 +1,5 @@
 class RestaurantsController < ApplicationController
   def index
-    # @restaurants = Restaurant.all
-    # render json: {restaurant: @restaurant, images:  @restaurant.images.map{|img| ({ image: url_for(img) })}}
-    # render json: @restaurants.images.map{|img| ({ image: url_for(img) })}
     @restaurants = []
     Restaurant.all.map do |restaurant|
       @restaurants.push({
