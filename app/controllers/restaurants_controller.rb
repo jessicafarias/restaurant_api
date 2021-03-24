@@ -22,7 +22,7 @@ class RestaurantsController < ApplicationController
     @all_images = @restaurant.images.map{|img| ({ image: url_for(img) })} if @restaurant.images.attached?
     render json: {restaurant: @restaurant, opinions:@opinions, images:  @all_images}
   end
-#Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio libero, varius eget lgula eget, pretium volutpat nunc. Duis volutpat ipsum.
+  #Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut odio libero, varius eget lgula eget, pretium volutpat nunc. Duis volutpat ipsum.
 
   def create
     @restaurant = Restaurant.create!(restaurant_params)
